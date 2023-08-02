@@ -8,10 +8,11 @@ let counter = 0;
 const interval = setInterval(() => {
     counter++;
 
-    if (counter === 1 || counter === 5) {
+    if (counter % 5 === 0) {
         console.log(Number(counter));
         // si es uno u cinco lo imprime en pantalla
-    } else if (counter === 10) {
+    }
+    if (counter === 10) {
         clearInterval(interval);
         console.log(`fin ${Number(counter)}`);
     }
@@ -33,21 +34,17 @@ Intenta que el log muestre Hello World
 let greeting = "World";
 let hello = 'hellow'
 
- function sayHi(texto) {
-    console.log(greeting);
-
-    setTimeout(()=>{
-        console.log(`${texto} ${greeting}`);
-       
-
-    },3000)
+function sayHi(texto) {
+    console.log(texto);
+    
 }
+setTimeout(()=>{
+    greeting="Hello World";
+},3000)
 
-
-sayHi(hello)
-
-
- 
+setTimeout(()=>{
+    sayHi(greeting) 
+},3000)
 
 
 // La empresa de Otniel-----------Ejercicio 3--------------------------------------
